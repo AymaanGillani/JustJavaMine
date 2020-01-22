@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#795548">
+
+            <ImageView
+                android:id="@+id/descPic"
+                android:layout_width="187dp"
+                android:layout_height="152dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/description1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@id/descPic"
+                android:layout_toRightOf="@id/descPic"
+                android:text="JustJava is an online ordering coffee shop that sells 5 types of coffees with 2 different toppings.Just type in your name and address and we will be there in 10 minutes with piping hot cups of coffee. "
+                android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+            <TextView
+                android:id="@+id/name1"
+                style="@style/cardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Latte" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/name1"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/latte" />
+
+            <TextView
+                android:id="@+id/desc1"
+                style="@style/cardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/name1"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img1"
+                android:text="Latte is a coffee drink made with espresso and steamed milk." />
+
+            <Spinner
+                android:id="@+id/spin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/whip1" />
+
+            <Button
+                android:id="@+id/dec1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin1"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/choco1"
+                android:onClick="decL"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/quantity1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spin1"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/dec1"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/inc1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin1"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/quantity1"
+                android:onClick="incL"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/whip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc1"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img1"
+                android:text="Whipped Cream"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/choco1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whip1"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img1"
+                android:text="Add Chocolate"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+            <TextView
+                android:id="@+id/desc2"
+                style="@style/cardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/name2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img2"
+                android:text="Espresso is an Italian coffee brewed using a small amount of water and finely ground coffee beans." />
+
+            <Spinner
+                android:id="@+id/spin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/whip2" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/name2"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/espresso1" />
+
+            <TextView
+                android:id="@+id/name2"
+                style="@style/cardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Espresso" />
+
+            <CheckBox
+                android:id="@+id/whip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc2"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img2"
+                android:text="Whipped Cream"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/choco2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whip2"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img2"
+                android:text="Add Chocolate"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/quantity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spin2"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/dec2"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/dec2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/choco2"
+                android:onClick="decE"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/inc2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/quantity2"
+                android:onClick="incE"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+            <TextView
+                android:id="@+id/desc3"
+                style="@style/cardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/name3"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img3"
+                android:text="Cappuccino is an espresso-based coffee drink that originated in Italy prepared with steamed milk foam. " />
+
+            <Spinner
+                android:id="@+id/spin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/whip3" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/name3"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cappuccino1" />
+
+            <TextView
+                android:id="@+id/name3"
+                style="@style/cardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Cappuccino" />
+
+            <CheckBox
+                android:id="@+id/whip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc3"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img3"
+                android:text="Whipped Cream"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/choco3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whip3"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img3"
+                android:text="Add Chocolate"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/quantity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spin3"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/dec3"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/dec3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin3"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/choco3"
+                android:onClick="decC"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/inc3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin3"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/quantity3"
+                android:onClick="incC"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+            <TextView
+                android:id="@+id/desc4"
+                style="@style/cardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/name4"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img4"
+                android:text="A long black is made by pouring a double-shot of espresso or ristretto over hot water." />
+
+            <Spinner
+                android:id="@+id/spin4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/whip4" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/name4"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/longblack1" />
+
+            <TextView
+                android:id="@+id/name4"
+                style="@style/cardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Long Black" />
+
+            <CheckBox
+                android:id="@+id/whip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc4"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img4"
+                android:text="Whipped Cream"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/choco4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whip4"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img4"
+                android:text="Add Chocolate"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/quantity4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spin4"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/dec4"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/dec4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin4"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/choco4"
+                android:onClick="decB"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/inc4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin4"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/quantity4"
+                android:onClick="incB"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+            <TextView
+                android:id="@+id/desc5"
+                style="@style/cardDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/name5"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img5"
+                android:text="Caffè macchiato is an espresso coffee drink with a small amount of milk, usually foamed." />
+
+            <Spinner
+                android:id="@+id/spin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc5"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/whip5" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/name5"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/macchiato" />
+
+            <TextView
+                android:id="@+id/name5"
+                style="@style/cardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Macchiato" />
+
+            <CheckBox
+                android:id="@+id/whip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc5"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img5"
+                android:text="Whipped Cream"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:id="@+id/choco5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whip5"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/img5"
+                android:text="Add Chocolate"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/quantity5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spin5"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/dec5"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/dec5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin5"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/choco5"
+                android:onClick="decM"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/inc5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spin5"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@id/quantity5"
+                android:onClick="incM"
+                android:text="+"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
